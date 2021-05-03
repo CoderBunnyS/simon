@@ -1,6 +1,7 @@
 var buttonColors = ["red", "blue", "green", "yellow"];
 gamePattern = [];
 userClickedPattern = [];
+var gameStarted = False;
 
 function nextSequence() {
     let randomNumber = Math.floor((Math.random() * 4));
@@ -29,10 +30,15 @@ function playSound(sound) {
     audio.play();
 }
    
-  function animatePress(currentColor){
+function animatePress(currentColor){
    
       $('#' + currentColor).addClass("pressed");
       setTimeout(function (){
           $("#"+ currentColor).removeClass("pressed")
       },100)
   };
+  $(document).keypress(function(event) {
+      nextSequence()
+  })
+
+$(document).keypress(nextSequence())
