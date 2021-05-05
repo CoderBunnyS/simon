@@ -12,7 +12,8 @@ function nextSequence() {
     console.log(gamePattern)
     $("#" + randomColor).fadeOut(100).fadeIn(100);
     playSound(randomColor)
-    
+    level++
+    $("#level-title").text("Level " + level);
 }
 
 $(".btn").on("click", function(event){
@@ -22,6 +23,7 @@ $(".btn").on("click", function(event){
     //console.log(userClickedPattern)
     playSound(userChosenColour)
     animatePress(userChosenColour);
+    checkAnswer(userChosenColour.index);
 })
 
 function playSound(sound) {
@@ -49,3 +51,7 @@ $("document").keypress(function(){
         started = true;
     }
 })
+
+function checkAnswer(currentLevel){
+    
+}
