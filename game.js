@@ -41,4 +41,4 @@ function animatePress(currentColor){
       nextSequence()
   })
 
-$(document).keypress(nextSequence())
+$("document").keypress(nextSequence())
