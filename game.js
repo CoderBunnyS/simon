@@ -41,14 +41,7 @@ function animatePress(currentColor){
       nextSequence()
   })
 
-//$("document").keypress(nextSequence())
-$("document").keypress(begin())
+$("document").keypress(nextSequence())
+//$("document").keypress(begin())
 
-function begin() {
-    let gameStarted = "false"
-    $("document").keypress(gameStarted = "True")
-    console.log(gameStarted)
-    if (gameStarted == "True") {
-        nextRound()
-    }
-}
+$("document").keypress(gameStarted = "True")
