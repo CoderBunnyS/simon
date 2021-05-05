@@ -1,7 +1,7 @@
 var buttonColors = ["red", "blue", "green", "yellow"];
 gamePattern = [];
 userClickedPattern = [];
-var gameStarted = False;
+//var gameStarted = False;
 
 function nextSequence() {
     let randomNumber = Math.floor((Math.random() * 4));
