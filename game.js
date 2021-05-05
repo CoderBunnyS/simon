@@ -26,8 +26,8 @@ $(".btn").on("click", function(event){
 function playSound(sound) {
     var audio = new Audio("./sounds/" + sound + ".mp3");
     audio.play();
-    var player = new Audio("./sounds" + userChosenColour + ".mp3")
-    audio.play();
+    //var player = new Audio("./sounds" + userChosenColour + ".mp3")
+    //audio.play();
 }
    
 function animatePress(currentColor){
@@ -41,4 +41,14 @@ function animatePress(currentColor){
       nextSequence()
   })
 
-$("document").keypress(nextSequence())
+//$("document").keypress(nextSequence())
+$("document").keypress(begin())
+
+function begin() {
+    let gameStarted = "false"
+    $("document").keypress(gameStarted = "True")
+    console.log(gameStarted)
+    if (gameStarted == "True") {
+        nextRound()
+    }
+}
