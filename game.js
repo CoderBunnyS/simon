@@ -23,7 +23,9 @@ $(".btn").on("click", function(event){
     //console.log(userClickedPattern)
     playSound(userChosenColour)
     animatePress(userChosenColour);
-    checkAnswer(userChosenColour.index);
+    let lastColor = userClickedPattern[userClickedPattern.length - 1];
+    checkAnswer(lastColor);
+    console.log(lastColor)
 })
 
 function playSound(sound) {
